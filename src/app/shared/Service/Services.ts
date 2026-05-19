@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Observable,of } from "rxjs";
-import { ITodo } from "../modules/todo";
+import { Ires, ITodo } from "../modules/todo";
 import { HttpClient } from "@angular/common/http";
 
 
@@ -45,10 +45,22 @@ fetchTodo():Observable<ITodo[]>{
 return of(this.todosArr)
 }
 
-fetchTodos(){
-  return this._http.get<ITodo[]>('https://jsonplaceholder.typicode.com/posts')
+// fetchTodos(){
+//   return this._http.get<ITodo[]>('https://jsonplaceholder.typicode.com/posts')
+// }
+
+
+
+
+addTodo(todo:ITodo):Observable<Ires>{
+// API Call
+this.todosArr.push(todo)
+let res={
+  msg:`New Todo Item With Id ${todo.todoId} Added successfully!!`,
+  data:todo 
 }
+return of(res)
 
-
+}
 
 }

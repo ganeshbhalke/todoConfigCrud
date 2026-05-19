@@ -10,3 +10,8 @@ export interface ITodo{
     todoId: string;
     isComplated: boolean;
 }
+
+export interface Ires {
+    msg: string;
+    data: ITodo;
+}
