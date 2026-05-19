@@ -9,7 +9,9 @@ import { TodoListComponent } from './shared/component/todo-list/todo-list.compon
 import { TodoFormComponent } from './shared/component/todo-form/todo-form.component';
 import {MatButtonModule } from '@angular/material/button';
 import {MatIconModule } from '@angular/material/icon';
+import {MatSnackBarModule } from '@angular/material/snack-bar';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +25,9 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     MatButtonModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
